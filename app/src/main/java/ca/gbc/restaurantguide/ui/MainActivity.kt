@@ -54,6 +54,9 @@ class MainActivity : AppCompatActivity() {
         binding.btnAdd.setOnClickListener {
             startActivity(Intent(this, AddEditRestaurantActivity::class.java))
         }
+        binding.fabAbout.setOnClickListener {
+            startActivity(Intent(this, AboutActivity::class.java))
+        }
 
         val helper = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
             override fun onMove(rv: RecyclerView, vh: RecyclerView.ViewHolder, t: RecyclerView.ViewHolder) = false

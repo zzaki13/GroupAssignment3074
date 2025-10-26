@@ -57,4 +57,16 @@
             android:paddingTop="8dp"/>
     </LinearLayout>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="About"
+        app:layout_anchorGravity="bottom|end"
+        app:layout_anchor="@id/content"
+        android:layout_margin="16dp"
+        app:tint="@android:color/white"
+        app:srcCompat="@drawable/ic_info_24"
+        app:backgroundTint="?attr/colorPrimary" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
