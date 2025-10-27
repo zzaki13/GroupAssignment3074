@@ -8,8 +8,8 @@
         android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:title="About"
+        android:background="#6100EB"
+        android:paddingTop="14dp"
         android:titleTextColor="@android:color/white"
         app:navigationIcon="@drawable/ic_arrow_back_24" />
 

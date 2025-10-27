@@ -27,6 +27,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.topAppBar)
+        binding.topAppBar.setTitleTextColor(android.graphics.Color.WHITE)
+        supportActionBar?.title = "Restaurant Guide"
+
 
         adapter = RestaurantAdapter(
             onClick = { item ->
@@ -70,5 +73,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
         helper.attachToRecyclerView(binding.recycler)
+
     }
 }

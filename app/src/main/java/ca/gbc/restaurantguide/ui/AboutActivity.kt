@@ -16,6 +16,10 @@ class AboutActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.topBar)
+        binding.topBar.setTitleTextColor(android.graphics.Color.WHITE)
+        supportActionBar?.title = "About"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         binding.topBar.setNavigationOnClickListener { finish() }
 
         val versionName = packageManager.getPackageInfo(packageName, 0).versionName

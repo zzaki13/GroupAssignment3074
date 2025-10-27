@@ -9,9 +9,11 @@
         android:id="@+id/topAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="Restaurant Guide"
-        android:background="?attr/colorPrimary"
-        android:titleTextColor="@android:color/white"/>
+        android:title="RestauranttttttGuide"
+        android:background="#6100EB"
+        android:paddingTop="14dp"
+        android:titleTextColor="@android:color/white"
+        />
 
     <LinearLayout
         android:id="@+id/content"
@@ -65,8 +67,8 @@
         app:layout_anchorGravity="bottom|end"
         app:layout_anchor="@id/content"
         android:layout_margin="16dp"
-        app:tint="@android:color/white"
+        app:tint="#FFFFFFFF"
         app:srcCompat="@drawable/ic_info_24"
-        app:backgroundTint="?attr/colorPrimary" />
+        android:backgroundTint="#6100EB" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
