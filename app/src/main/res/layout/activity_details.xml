@@ -1,4 +1,178 @@
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:gravity="center" android:textSize="18sp"
-    android:text="Details Screen (placeholder)"/>
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#6100EB"
+            android:layout_marginTop="16dp"
+            android:paddingTop="1dp"
+            android:title="Restaurant Details"
+            app:strokeColor="#DDDDDD"
+
+            android:titleTextColor="@android:color/white"
+            app:navigationIcon="@drawable/ic_arrow_back_24" />
+
+        <!-- Main card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Name + Edit button -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:text="Restaurant Name"/>
+
+                    <ImageButton
+                        android:id="@+id/btnEdit"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Edit restaurant"
+                        android:padding="6dp"
+                        app:tint="?attr/colorPrimary"
+                        android:src="@drawable/ic_edit_24"/>
+                </LinearLayout>
+
+                <!-- Address -->
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:textColor="#666666"
+                    android:layout_marginTop="12dp"
+                    android:textSize="15sp"/>
+
+                <!-- Map preview + icon -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="#DDDDDD"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <!-- This is where the google API would go -->
+                        <ImageView
+                            android:id="@+id/imgMap"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:contentDescription="Map preview"
+                            android:scaleType="centerCrop" />
+
+                        <ImageButton
+                            android:id="@+id/btnOpenMap"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="8dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Open in Maps"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_map_24"
+                            app:tint="?attr/colorPrimary" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Phone -->
+                <TextView
+                    android:id="@+id/tvPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phone"
+                    android:textColor="#666666"
+                    android:layout_marginTop="12dp"
+                    android:textSize="15sp"/>
+
+                <!-- Description -->
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:layout_marginTop="12dp"
+                    android:textSize="15sp"/>
+
+                <!-- Tags -->
+                <TextView
+                    android:id="@+id/tvTags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tags"
+                    android:layout_marginTop="8dp"
+                    android:textSize="14sp"
+                    android:textColor="#666666"/>
+
+                <!-- Rating -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start|center_vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rating: "
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:isIndicator="true"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>
