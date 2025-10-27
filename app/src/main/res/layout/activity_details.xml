@@ -11,7 +11,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Toolbar -->
+
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topBar"
             android:layout_width="match_parent"
@@ -25,7 +25,6 @@
             android:titleTextColor="@android:color/white"
             app:navigationIcon="@drawable/ic_arrow_back_24" />
 
-        <!-- Main card -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,7 +39,6 @@
                 android:orientation="vertical"
                 android:padding="20dp">
 
-                <!-- Name + Edit button -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -67,7 +65,6 @@
                         android:src="@drawable/ic_edit_24"/>
                 </LinearLayout>
 
-                <!-- Address -->
                 <TextView
                     android:id="@+id/tvAddress"
                     android:layout_width="match_parent"
@@ -77,7 +74,6 @@
                     android:layout_marginTop="12dp"
                     android:textSize="15sp"/>
 
-                <!-- Map preview + icon -->
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
@@ -95,7 +91,6 @@
                         android:orientation="horizontal"
                         android:padding="8dp">
 
-                        <!-- This is where the google API would go -->
                         <ImageView
                             android:id="@+id/imgMap"
                             android:layout_width="0dp"
@@ -118,7 +113,6 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Phone -->
                 <TextView
                     android:id="@+id/tvPhone"
                     android:layout_width="match_parent"
@@ -128,7 +122,6 @@
                     android:layout_marginTop="12dp"
                     android:textSize="15sp"/>
 
-                <!-- Description -->
                 <TextView
                     android:id="@+id/tvDescription"
                     android:layout_width="match_parent"
@@ -137,7 +130,6 @@
                     android:layout_marginTop="12dp"
                     android:textSize="15sp"/>
 
-                <!-- Tags -->
                 <TextView
                     android:id="@+id/tvTags"
                     android:layout_width="match_parent"
@@ -147,7 +139,6 @@
                     android:textSize="14sp"
                     android:textColor="#666666"/>
 
-                <!-- Rating -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

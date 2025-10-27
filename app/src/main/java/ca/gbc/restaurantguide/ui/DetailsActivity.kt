@@ -8,12 +8,18 @@ import ca.gbc.restaurantguide.databinding.ActivityDetailsBinding
 class DetailsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailsBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState); setContentView(R.layout.activity_details)
+        super.onCreate(savedInstanceState)
+
+
+        binding = ActivityDetailsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         setSupportActionBar(binding.topBar)
         supportActionBar?.title = "Restaurant Details"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-//        binding.topBar.setNavigationOnClickListener { finish() }
+        binding.topBar.setNavigationOnClickListener { finish()}
     }
 }
