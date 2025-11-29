@@ -11,7 +11,6 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topBar"
             android:layout_width="match_parent"
@@ -20,8 +19,6 @@
             android:layout_marginTop="16dp"
             android:paddingTop="1dp"
             android:title="Restaurant Details"
-            app:strokeColor="#DDDDDD"
-
             android:titleTextColor="@android:color/white"
             app:navigationIcon="@drawable/ic_arrow_back_24" />
 
@@ -162,6 +159,18 @@
                         android:isIndicator="true"
                         android:layout_marginStart="8dp"/>
                 </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_share_facebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Share on Facebook"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="#6100EB"
+                    android:textColor="@android:color/white"
+                    android:padding="12dp"/>
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

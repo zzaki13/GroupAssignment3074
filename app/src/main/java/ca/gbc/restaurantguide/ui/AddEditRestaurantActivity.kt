@@ -27,13 +27,11 @@ class AddEditRestaurantActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.topBar.setNavigationOnClickListener { finish() }
 
-        // Are we editing an existing item?
         val idExtra = intent.getLongExtra("id", 0L)
         editingId = if (idExtra > 0) idExtra else null
 
         if (editingId != null) {
             title = "Edit Restaurant"
-            // Load and prefill fields
             vm.load(editingId!!) { r ->
                 if (r != null) {
                     binding.etName.setText(r.name)
@@ -62,7 +60,6 @@ class AddEditRestaurantActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // If editing, keep the same id to trigger update
             val item = Restaurant(
                 id = editingId ?: 0L,
                 name = name,

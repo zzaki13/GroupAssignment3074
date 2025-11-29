@@ -9,11 +9,10 @@
         android:id="@+id/topAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="RestauranttttttGuide"
         android:background="#6100EB"
-        android:paddingTop="14dp"
-        android:titleTextColor="@android:color/white"
-        />
+        android:title="Restaurant Guide"
+        app:titleTextColor="@android:color/white"
+        app:navigationIconTint="@android:color/white" />
 
     <LinearLayout
         android:id="@+id/content"

@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Toolbar title is already set in XML
         setSupportActionBar(binding.topAppBar)
 
         setupRecycler()
@@ -39,13 +38,11 @@ class MainActivity : AppCompatActivity() {
     private fun setupRecycler() {
         adapter = RestaurantAdapter(
             onClick = { restaurant ->
-                // Open details screen for this restaurant
                 val intent = Intent(this, DetailsActivity::class.java)
                 intent.putExtra("id", restaurant.id)
                 startActivity(intent)
             },
             onEdit = { restaurant ->
-                // Open add/edit screen in edit mode
                 val intent = Intent(this, AddEditRestaurantActivity::class.java)
                 intent.putExtra("id", restaurant.id)
                 startActivity(intent)
@@ -55,7 +52,6 @@ class MainActivity : AppCompatActivity() {
         binding.recycler.layoutManager = LinearLayoutManager(this)
         binding.recycler.adapter = adapter
 
-        // Observe filtered list from ViewModel
         vm.filtered.observe(this) { list ->
             adapter.submitList(list)
         }
@@ -78,13 +74,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupButtons() {
-        // "+" button to add a new restaurant
         binding.btnAdd.setOnClickListener {
             val intent = Intent(this, AddEditRestaurantActivity::class.java)
             startActivity(intent)
         }
 
-        // "About" floating button
         binding.fabAbout.setOnClickListener {
             startActivity(Intent(this, AboutActivity::class.java))
         }
