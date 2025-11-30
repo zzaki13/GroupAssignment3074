@@ -30,6 +30,7 @@ class DetailsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.topBar)
+        binding.topBar.setTitleTextColor(android.graphics.Color.WHITE)
         supportActionBar?.title = "Restaurant Details"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.topBar.setNavigationOnClickListener { finish() }

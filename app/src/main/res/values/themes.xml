@@ -3,10 +3,10 @@
         <item name="android:statusBarColor">?attr/colorPrimary</item>
     </style>
 
-<!--    &lt;!&ndash; Optional for Android 12+ splash API (we still use a layout-based splash for all) &ndash;&gt;-->
-<!--    <style name="Theme.RestaurantGuide.Splash" parent="Theme.SplashScreen">-->
-<!--        <item name="windowSplashScreenBackground">#4B2DFF</item>-->
-<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>-->
-<!--        <item name="postSplashScreenTheme">@style/Theme.RestaurantGuide</item>-->
-<!--    </style>-->
+    <!--    &lt;!&ndash; Optional for Android 12+ splash API (we still use a layout-based splash for all) &ndash;&gt;-->
+    <!--    <style name="Theme.RestaurantGuide.Splash" parent="Theme.SplashScreen">-->
+    <!--        <item name="windowSplashScreenBackground">#4B2DFF</item>-->
+    <!--        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>-->
+    <!--        <item name="postSplashScreenTheme">@style/Theme.RestaurantGuide</item>-->
+    <!--    </style>-->
 </resources>
